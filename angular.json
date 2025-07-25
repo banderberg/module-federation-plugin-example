@@ -11,11 +11,12 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/shell",
-						"index": "projects/shell/src/index.html",
-						"main": "projects/shell/src/main.ts",
+						"outputPath": {
+              "base": "dist/shell"
+            },
+            "index": "projects/shell/src/index.html",
 						"polyfills": [
 							"zone.js"
 						],
@@ -27,7 +28,8 @@
 						"styles": [
 							"projects/shell/src/styles.css"
 						],
-						"scripts": []
+            "scripts": [],
+            "browser": "projects/shell/src/main.ts"
 					},
 					"configurations": {
 						"production": {
@@ -45,10 +47,8 @@
 							],
 							"outputHashing": "all"
 						},
-						"development": {
-							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
+            "development": {
+              "optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true,
 							"namedChunks": true
@@ -102,11 +102,12 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/mfe1",
-						"index": "projects/mfe1/src/index.html",
-						"main": "projects/mfe1/src/main.ts",
+						"outputPath": {
+              "base": "dist/mfe1"
+            },
+            "index": "projects/mfe1/src/index.html",
 						"polyfills": [
 							"zone.js"
 						],
@@ -118,7 +119,8 @@
 						"styles": [
 							"projects/mfe1/src/styles.css"
 						],
-						"scripts": []
+            "scripts": [],
+            "browser": "projects/mfe1/src/main.ts"
 					},
 					"configurations": {
 						"production": {
@@ -136,10 +138,8 @@
 							],
 							"outputHashing": "all"
 						},
-						"development": {
-							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
+            "development": {
+              "optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true,
 							"namedChunks": true
